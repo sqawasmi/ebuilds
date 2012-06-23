@@ -26,7 +26,7 @@ DEPEND="
 	sys-devel/autoconf
 	sys-devel/automake
 	sys-devel/libtool"
-	
+
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -51,7 +51,7 @@ src_configure() {
 	use profiler	&& myconf+=" --with-profiler"
 	
 	./configure \
-		--enable-layout=Gentoo
+		--enable-layout=Gentoo \
 		--with-user=${PN} \
 		--with-group=${PN} \
 		--sysconfdir=/etc/${PN} \
@@ -62,8 +62,9 @@ src_configure() {
 		--without-profiler \
 		--disable-ccache \
 		--enable-tproxy=auto \
-		--enable-standalone-iocore \
 		${myconf} || die "configure failed"
+		# standalone-iocore is broken until now!
+		#--enable-standalone-iocore \
 }
 
 src_compile() {
