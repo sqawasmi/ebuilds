@@ -6,14 +6,14 @@ EAPI="4"
 
 inherit autotools eutils
 
-DESCRIPTION="Apache Traffic Server™ software is a fast, scalable and extensible HTTP/1.1 compliant caching proxy server. Formerly a commercial product, Yahoo! donated it to the Apache Foundation, and it is now an Apache TLP."
+DESCRIPTION="Apache Traffic Server is a fast, scalable and extensible HTTP/1.1 compliant caching proxy server."
 HOMEPAGE="http://trafficserver.apache.org/"
 SRC_URI="mirror://apache/${PN}/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="+api +cap lzma wccp profiler"
+IUSE="+api +cap +lzma wccp profiler"
 
 DEPEND="
 	lzma? ( app-arch/xz-utils )
