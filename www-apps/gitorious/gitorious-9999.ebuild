@@ -36,7 +36,7 @@ pkg_nofetch()
 pkg_setup() {
 	ebegin "Creating gitorious user and group"
 	enewgroup ${USER}
-	enewuser ${USER} -1 /bin/bash ${HOME_DIR} ${USER}",cron,crontab"
+	enewuser ${USER} -1 /bin/bash ${HOME_DIR} ${USER}",cron,fcron"
 	eend ${?}
 }
 
