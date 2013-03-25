@@ -154,7 +154,6 @@ CDEPEND="
 		$(ruby_implementation_depend ruby19)
 		>=dev-ruby/rubygems-0.9.0
 		>=dev-ruby/rake-0.8.1
-		>=dev-ruby/fastthread-1.0.1
 		>=dev-ruby/rack-1.0.0
 		!!www-apache/passenger
 	)
